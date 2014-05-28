@@ -4,7 +4,7 @@
 
 * Install Ruby 2.1.1
 
-* Git Clone https://github.com/richsalvucci/Paperly_order.git
+* Git Clone https://github.com/richsalvucci/custom_surfboard.git
 
 * In the command line: gem install bundler
 

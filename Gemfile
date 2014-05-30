@@ -30,8 +30,6 @@ gem 'haml-rails'
 
 gem 'quiet_assets'
 
-gem 'twitter-bootstrap-rails'
-
 gem 'workflow'
 gem 'devise'
 gem 'jquery-ui-rails'

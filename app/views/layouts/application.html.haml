@@ -24,12 +24,12 @@
           %a.navbar-brand{:href => "#"} Build your board
         .navbar-collapse.collapse
           %ul.nav.navbar-nav
-            %li.active
+            %li
               = link_to "Home", root_path
             %li
-              %a{:href => "#about"} About
+              = link_to "About", about_path
             %li
-              %a{:href => "#contact"} Contact
+              = link_to "Contact", contact_path
         / /.nav-collapse
     .container.theme-showcase{:role => "main"}
       .container

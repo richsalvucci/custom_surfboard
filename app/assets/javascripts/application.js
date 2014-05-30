@@ -15,5 +15,7 @@
 //= require jquery.ui.all
 //= require twitter/bootstrap
 //= require turbolinks
+//= require underscore-min
+//= require gmaps/google
 //= require_tree .
 

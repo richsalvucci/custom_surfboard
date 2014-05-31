@@ -1,5 +1,10 @@
 class Surfboard < ActiveRecord::Base
   has_many :customers, through: :my_board
+  before_create :surfboard_email
+
+  def surfboard_email
+    SurfboardMailer.new_surfboard_email(self).deliver
+  end
 
   def self.select_board_type(board_type)
     if board_type == "Longboard"

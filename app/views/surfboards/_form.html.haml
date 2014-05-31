@@ -1,37 +1,38 @@
 %div.order_form
   =form_for @surfboard do |f|
-    = f.label :customer_name
-    = f.text_field :customer_name, placeholder: "Name"
-
-    = f.label :customer_email
-    = f.text_field :customer_email, placeholder: "Email"
-
-    = f.label :customer_phone
-    = f.text_field :customer_phone, placeholder: "Phone Number"
+    %div.customer_name{class: "form-group"}
+      = f.label :customer_name
+      = f.text_field :customer_name, placeholder: "Name" 
+    %div.customer_email{class: "form-group"}
+      = f.label :customer_email
+      = f.text_field :customer_email, placeholder: "Email"
+    %div.customer_phone{class: "form-group"}
+      = f.label :customer_phone
+      = f.text_field :customer_phone, placeholder: "Phone Number"
     %div.board_type{class: "board_type"}
       = f.label :board_type
       = f.select :board_type, options_for_select(Surfboard::BOARD_TYPE, @surfboard.board_type), include_blank: "Select", board_url: new_surfboard_path
     = f.label :materials
     = f.select :materials,  options_for_select(Surfboard::MATERIAL, @surfboard.materials), include_blank: "Select"
-    %div.fin_setup
+    %div.fin_setup{class: "form-group"}
       = f.label :fin_setup
       = f.select :fin_setup,  options_for_select(@options[:fin_setup], @surfboard.fin_setup), include_blank: "Select"
     
     = f.label :fin_type
     = f.select :fin_type,  options_for_select(Surfboard::FIN_TYPE, @surfboard.fin_type), include_blank: "Select"
-    %div.tail
+    %div.tail{class: "form-group"}
       = f.label :tail
       = f.select :tail,  options_for_select(@options[:tail], @surfboard.tail), include_blank: "Select"
-    %div.glassing
+    %div.glassing{class: "form-group"}
       = f.label :glassing
       = f.select :glassing,  options_for_select(@options[:glassing], @surfboard.glassing), include_blank: "Select"
-    %div.length
+    %div.length{class: "form-group"}
       = f.label :length
       = f.select :length, options_for_select(@options[:length], @surfboard.length), include_blank: "Select"
-    %div.width
+    %div.width{class: "form-group"}
       = f.label :width
       = f.select :width, options_for_select(@options[:width], @surfboard.width), include_blank: "Select"
-    %div.thickness
+    %div.thickness{class: "form-group"}
       = f.label :thickness
       = f.select :thickness, options_for_select(@options[:thickness], @surfboard.thickness), include_blank: "Select" 
     %div.graphics{"data-placement" => "right", "data-toggle" => "tooltip", :title => "Tell us what you what your board to look like. Airbrushing, Resin Tint, Acid Spash?", :type => "input"} 
